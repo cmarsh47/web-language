@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Title of the document</title>
+</head>
+
+<body>
+  <!--input element of type button are displayed as straightforward pushbuttons that, when given an event handler function, can be programmed to activate custom functionality anywhere on a webpage as needed.-->
+  <input id="name-input" type="text" placeholder="Enter your name" />
+  <!--locates the button using the id-->
+    <button id="my-button">Click Me</button>
+    
+    <!--returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.-->
+    <script>
+      var myButton = document.querySelector('#my-button');
+      var nameInput = document.querySelector('#name-input');
+    
+      
+      myButton.addEventListener('click', function () {
+        if (nameInput.value !== '') {
+          alert('Hello ' + nameInput.value);
+        }
+      });
+    </script>
+    <!--The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target.-->
+</body>
+
+</html>
